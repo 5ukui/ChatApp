@@ -1,0 +1,459 @@
+@font-face {
+    font-family: 'pixel';
+    src: url('/assets/pixelart.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'scribble';
+    src: url('/assets/scribble.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'pixeloid';
+    src: url('/assets/pixeloid.ttf') format('truetype');
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
+
+input {
+    outline: none;
+}
+
+img {
+    pointer-events: none;
+}
+
+body {
+    letter-spacing: normal;
+    word-spacing: normal;
+}
+
+.main.container {
+    margin-top: 60px;
+    border: 3px bold #000000;
+    margin-bottom: 60px;
+}
+
+.text {
+    display: inline-block;
+    font-family: 'pixel';
+}
+
+.sub.container {
+    display: flex;
+}
+
+.desc {
+    display: inline-block;
+    font-family: 'pixel';
+    font-size: 14px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.start.chatting {
+    font-size: 1.4em;
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.start.chatting.btn {  
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: 'pixel';
+    font-size: 1em;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.main.image {
+    width: 400px;
+    height: 350px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+
+
+.search.user.form {
+    /* padding-top: 10px; */
+    display: flex;
+}
+
+.username.search {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    height: 25px;
+    font-family: 'pixeloid';
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-size: 11px;
+}
+
+.username.search::placeholder {
+    font-family: 'pixel';
+    font-size: 12px;
+    /* letter-spacing: 1px;
+    word-spacing: 3px; */
+}
+
+.search-results {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 260px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 10px;
+    z-index: 999;
+    animation: slideIn 0.3s ease-in-out forwards;
+}
+
+.search-results ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.search-results li {
+    display: flex;
+    padding: 20px;
+    /* border-bottom: 1px solid #ccc; */
+}
+
+.search-results button {
+    border: none;
+    background: none;
+    padding-right: 20px;
+    cursor: pointer;
+    outline: none;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    right: 0;
+}
+
+.search-results img {
+    width: 20px;
+    height: 20px;
+}
+
+/* .search-results li:last-child {
+    border-bottom: none;
+} */
+
+.search.submit {
+    border: none;
+    background: none;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    outline: none;
+    width: fit-content;
+    height: fit-content;
+}
+
+.search.submit img {
+    width: 25px;
+    height: 25px;
+}
+
+.dropdown-menu.dropdown-menu-right {
+    text-align: center; 
+    left: auto;
+    width: auto;
+    /* min-width: 10px; */
+    animation: slideIn 0.3s ease-in-out forwards;
+    /* overflow-x: auto; */
+    border: 1px solid black;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.dropdown-menu.friends {
+    text-align: center; 
+    left: auto;
+    width: auto;
+    /* min-width: 10px; */
+    animation: slideIn 0.3s ease-in-out forwards;
+    /* overflow-x: auto; */
+    border: 1px solid black;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+/* For WebKit (Chrome, Safari, etc.) */
+.dropdown-menu.dropdown-menu-right::-webkit-scrollbar {
+    width: 50px;
+}
+
+/* For Firefox */
+/* .dropdown-menu.dropdown-menu-right {
+    scrollbar-width: thin;
+} */
+
+/* Style the scrollbar thumb */
+.dropdown-menu.dropdown-menu-right::-webkit-scrollbar-thumb {
+    background-color: #000;
+}
+
+.dropdown-menu.dropdown-menu-right {
+    scrollbar-color: #000 transparent;
+}
+
+.navbar {
+    margin: 0;
+    padding: 0;
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.nav-link {
+    font-family: 'pixel';
+    font-size: 12px;
+    padding: 10px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.nav-link.requests {
+    font-family: 'pixeloid';
+    font-size: 9px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+    border-bottom: 1px solid black;
+    padding-bottom: 15px;
+}
+
+.requests-table {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    height: auto;
+    overflow-y: hidden;
+    background-color: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.user-item-container {
+    margin-top: 20px;
+    padding: 0;
+    animation: slideIn 0.3s ease-in-out forwards;
+}
+
+.accept-button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: 30px;
+}
+
+.reject-button {
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    width: auto;
+    height: auto;
+    position: absolute;
+    right: 05px;
+}
+
+.requests-container{
+    animation: slideIn 0.3s ease-in-out forwards;
+}
+
+.friends-container {
+    /* display: none; */
+    padding: 15px;
+    animation: slideIn 0.3s ease-in-out forwards;
+}
+
+.friend-entry {
+    display: flex;
+    padding: 0;
+}
+
+
+
+.chat-button{
+    border: none;
+    background: none;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+    width: auto;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.chat-img {
+    width: 17px;
+    height: 17px;
+    pointer-events: none;
+}
+
+.watermark {
+    font-family: 'scribble';
+    font-size: 1.4em;
+    /* text-transform: uppercase; */
+}
+
+
+.signup-container {
+    width: auto;
+    height: auto;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    color: #ffffff;
+    font-size: 1em;
+    font-family: 'pixel';
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.signup-container h2 {
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+input {
+    margin-bottom: 10px;
+    width: 400px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+    font-family: 'Roboto', sans-serif;
+}
+
+.submit-button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    font-family: 'pixel';
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+footer {
+    background-color: #000000;
+    text-align: center;
+    width: 100%;
+    height: 20px;
+}
+
+footer p {
+    color: #ffffff;
+    font-family: 'pixel';
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.username.error {
+    text-align: center;
+    color: #fb3a3a;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.email.error {
+    text-align: center;
+    color: #fb3a3a;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.password.error {
+    text-align: center;
+    color: #fb3a3a;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.row {
+    display: flex;
+}
+
+label {
+    padding-left: 20px;
+    margin-right: 10px;
+}
+

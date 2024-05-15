@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/styles.css">
+<div class="main container">
+    <h1 class="text">ChatApp</h1>
+    <div class="sub container">
+        <div class="sub text">
+            <p class="desc">ChatApp brings the nostalgia of classic pixel art to modern messaging. Step into a vibrant world where every conversation is a masterpiece. Our chatting app combines the charm of retro graphics with the convenience of instant messaging, creating a unique and immersive experience for users.</p>      
+            <div class="start chatting">
+
+                <% if (user) { %>
+                    
+                    <button class="start chatting btn" onclick="window.location.href = '/chats'">Start Chatting</button>
+
+                <% } else { %>
+
+                    <button class="start chatting btn" onclick="window.location.href = '/signup'">Start Chatting</button>
+
+                <% } %>
+                
+            </div>
+        </div>
+        <img src="/assets/mainpage.png" class="main image"></img>
+    </div>
+</div>

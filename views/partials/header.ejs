@@ -1,0 +1,124 @@
+<link rel="stylesheet" href="/styles.css">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<header>
+    <nav class="navbar navbar-expand navbar-light bg-light">
+        <% if (user) { %>
+
+            <a class="navbar-brand" href="/chats">
+                <img src="/assets/logo.png" alt="Logo" style="height: 27px; width: 30px;">
+            </a>
+
+            <form class="search username form">
+                <div class="search user form">
+                    <input name="username" type="text" class="username search" placeholder="Search users"/>
+                    <div id="searchResults" class="search-results"></div>
+                    <button type="submit" class="search submit">
+                        <img src="/assets/search.png" class="submit-search-btn">
+                    </button>
+                </div>
+            </form>
+            <script src="/scripts/search.js"></script>
+
+
+        <% } else { %>
+
+            <a class="navbar-brand" href="/">
+                <img src="/assets/logo.png" alt="Logo" style="height: 28px; width: 30px;">
+            </a>
+
+        <% } %>
+
+
+
+        <ul class="navbar-nav mr-auto">
+
+            <% if (!user) { %>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+
+            <% } else { %>
+
+                <!-- <li class="nav-item">
+                    <a class="nav-link" href="/app">Chats</a>
+                </li> -->
+            
+            <% } %>
+
+        </ul>
+    
+        <ul class="navbar-nav">
+            <% if (user) { %>
+
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle friends" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="/assets/friends.png" alt="" style="width: 26px; height: 15px; ">
+                        Friends
+                    </a>
+                    
+                    <div class="dropdown-menu dropdown-menu-right friends" aria-labelledby="navbarDropdown">
+
+                        <div class="requests-container">
+
+                        </div>
+
+                        <div class="friends-container">
+                            
+                        </div>
+
+                    </div>
+                </li>
+
+
+                <li class="nav-item dropdown user">
+                    <a class="nav-link dropdown-toggle user" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%= user.username %></a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        
+                        <a class="nav-link" href="/profile">
+                            <img src="/assets/profile.png" alt="" style="width: 10px; height: 12px; ">
+                            Profile
+                        </a>
+
+                        <a class="nav-link" id="status-link" href="#">
+                            Status: <span id="status"></span>
+                        </a>
+                        
+                        <a class="nav-link" href="/logout">
+                            <img src="/assets/logout.png" alt="" style="width: 15px; height: 20px;">
+                            Logout
+                        </a>
+                    </div>
+                </li>
+
+            <% } else { %>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/signup" style="background-color: rgb(0, 0, 0); border-radius: 10px; color: aliceblue;">Sign Up</a>
+                </li>
+
+            <% } %>
+
+        </ul>
+    </nav>
+</header>
+
+
+<div class="requests-table">
+    <span style="display: table; margin: 0 auto; font-family: 'pixel'; font-size: 16px; letter-spacing: 1px; word-spacing: 3px;">Requests</span>
+    <span class="close">&times;</span>
+    <div class="requests-list-container">
+
+    </div>
+</div>
+
+
+
