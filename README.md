@@ -20,7 +20,7 @@ An end-to-end encrypted real-time communication webapp project developed using N
 
 • Security: Password hashing (bCrypt) & end-to-end encryption (CryptoJS).
 
-• Encryption Type: Asymetrical encryption (Public-key encryption)
+• Encryption Type: Asymmetrical encryption (Public-key encryption)
 
 • Encryption Algorith: RSA
 
