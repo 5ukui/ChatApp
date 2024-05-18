@@ -3,15 +3,15 @@
     <img src="/public/assets/logo.png" alt="Logo" width="100" height="90">
   </a>
   
-  <h3 align="center" href="https://github.com/HuthaifaM/ChatApp">ChatApp</h3>
+  <h3 align="center" href="https://github.com/HuthaifaM/ChatApp"> 💬 ChatApp</h3>
 </div>
 
 ![Github](https://img.shields.io/github/followers/5ukui.svg?style=social&label=Follow&maxAge=2592000)
 
-## About The Project
+## 📄 About The Project
 An end-to-end encrypted real-time communication webapp project developed using NodeJS and Express. This project was created for educational purposes and includes copyrighted assets along with several bugs.
 
-## Architecture & Design
+## 📐 Architecture & Design
 • Back-End Framework: Node.js & Express
 
 • Communication Protocol: WebSocket (Socket.io)
@@ -35,7 +35,7 @@ An end-to-end encrypted real-time communication webapp project developed using N
 ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
 
 
-## Setting up the project
+## ❔ Setting up the project
 1. Clone the repository:
 ```
 git clone https://github.com/5ukui/ChatApp
@@ -54,7 +54,7 @@ npm install
 node app.js
 ```
 
-## Features & Screenshots
+## 🔎 Features & Screenshots
 ### • User Signup/Login system and password hashing before storing it in the database
 <div align="center" style="display: flex">
   <img src="/screenshots/signup.PNG">
